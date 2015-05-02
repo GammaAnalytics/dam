@@ -6,7 +6,7 @@
 	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/spring/um-context.xml</param-value>
+		<param-value>/WEB-INF/spring/dam-context.xml</param-value>
 	</context-param>
 	
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
@@ -26,7 +26,7 @@
 	</servlet>
 		
 	<servlet-mapping>
-		<servlet-name>umDispatcherServlet</servlet-name>
+		<servlet-name>damDispatcherServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
@@ -34,34 +34,7 @@
     	<session-timeout>10</session-timeout>
 	</session-config>
 	
-	<!-- Spring Security -->
-    <!-- <filter>
-        <filter-name>springSecurityFilterChain</filter-name>
-        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>springSecurityFilterChain</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping> -->
 
-    <!-- Enconding helper filter -->
-	<!-- <filter>
-		<filter-name>encodingFilter</filter-name>
-		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-		<init-param>
-			<param-name>encoding</param-name>
-			<param-value>UTF-8</param-value>
-		</init-param>
-		<init-param>
-			<param-name>forceEncoding</param-name>
-			<param-value>true</param-value>
-		</init-param>
-	</filter>
-	<filter-mapping>
-		<filter-name>encodingFilter</filter-name>
-		<servlet-name>vueServlet</servlet-name>
-	</filter-mapping> -->
-	
 	
 	<filter>
 	    <filter-name>shiroFilter</filter-name>
