@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{100} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>/home/abhi/dam/um-out.log</file>
+    <!-- <file>/home/abhi/sandbox/prod/um/logs/um-out.log</file> -->
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>/home/abhi/dam/logs/um-out_%d{yyyy-MM-dd}.log</fileNamePattern>
+      <!-- <fileNamePattern>/home/abhi/sandbox/prod/um/logs/um-out_%d{yyyy-MM-dd}.log</fileNamePattern> -->
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+ 
+    <encoder>
+      <pattern>%-4relative [%thread] %-5level %logger{100} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Strictly speaking, the level attribute is not necessary since -->
+  <!-- the level of the root level is set to DEBUG by default.       -->
+  <root level="DEBUG">          
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
+  </root>  
+  
+</configuration>
