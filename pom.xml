@@ -17,7 +17,7 @@
         <slf4j.version>1.7.5</slf4j.version>
         <mysql.version>5.0.5</mysql.version>
         <commons_configuration.version>1.10</commons_configuration.version>
-        <bonecp.version>0.8.0-rc3</bonecp.version>
+        <bonecp.version>0.8.0.RELEASE</bonecp.version>
         <gson.version>2.2.4</gson.version>
         <opencsv.version>2.3</opencsv.version>
         <aws.version>1.7.8.1</aws.version>
