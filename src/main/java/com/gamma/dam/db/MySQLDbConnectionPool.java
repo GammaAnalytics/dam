@@ -36,11 +36,11 @@ public class MySQLDbConnectionPool {
         DBConfig config = manager.getDBConfigs().get("mysql");
         String dbHost = config.getHost();
         String dbPort = config.getPort();
-        String sid = config.getDatabase();
+        String db = config.getDatabase();
         userName = config.getUsername();
         password = config.getPassword();
         Class.forName(config.getDriver());
-        URL = "jdbc:oracle:thin:@//" + dbHost + ':' + dbPort + '/' + sid;
+        URL = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + db;
 
         BoneCPDataSource boneCPDataSource = new BoneCPDataSource();
         boneCPDataSource.setDriverClass(config.getDriver());
