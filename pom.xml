@@ -6,6 +6,7 @@
 
     <groupId>com.gamma.dam</groupId>
     <artifactId>dam</artifactId>
+    <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
 
@@ -265,4 +266,5 @@
             </plugin>
         </plugins>
     </build>
+    
 </project>

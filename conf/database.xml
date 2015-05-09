@@ -16,7 +16,15 @@
         	<username>root</username>
         	<password>root</password>
         	<driver>com.mysql.jdbc.Driver</driver>
+        	<idleConnectionTestPeriodInMinutes>60</idleConnectionTestPeriodInMinutes>
+            <idleMaxAgeInMinutes>420</idleMaxAgeInMinutes>
+            <maxConnectionsPerPartition>10</maxConnectionsPerPartition>
+            <minConnectionsPerPartition>5</minConnectionsPerPartition>
+            <partitionCount>5</partitionCount>
+            <acquireIncrement>5</acquireIncrement>
+            <statementsCacheSize>200</statementsCacheSize>
         </DBConfig>
+        
         
 
         

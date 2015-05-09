@@ -4,6 +4,8 @@ import com.gamma.dam.db.MySQLDbConnectionPool;
 import com.gamma.dam.exceptions.DAMAuthenticationException;
 import com.gamma.dam.exceptions.DAMAuthorizationException;
 import com.gamma.dam.exceptions.DAMUnknownAccountException;
+import com.gamma.dam.utility.ApplicationBootstrap;
+
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -36,6 +38,7 @@ public class DamRealm extends JdbcRealm {
     private MySQLDbConnectionPool pool;
 
     public DamRealm() {
+    	ApplicationBootstrap.instance().boot();
         pool = MySQLDbConnectionPool.instance();
     }
 
