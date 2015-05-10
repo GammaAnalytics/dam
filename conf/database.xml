@@ -3,7 +3,7 @@
         <DBConfig id = "1" name="mongo"> 
         	<host>127.0.0.1</host>
         	<port>27017</port>
-        	<database>prestoDb</database>
+        	<database>damConsole</database>
         	<username>admin</username>
         	<password>E92iLHiZvewa5EKLtCcP</password>
         	<driver></driver>
@@ -12,7 +12,7 @@
         <DBConfig id = "2" name="mysql">
         	<host>127.0.0.1</host>
         	<port>3306</port>
-        	<database>prontoDb</database>
+        	<database>damConsole</database>
         	<username>root</username>
         	<password>root</password>
         	<driver>com.mysql.jdbc.Driver</driver>
